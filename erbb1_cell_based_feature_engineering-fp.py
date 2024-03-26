@@ -23,7 +23,7 @@ def morgan_fpts(data):
     Morgan_fpts = []
     for i in data:
         mol = Chem.MolFromSmiles(i)
-        fpts =  AllChem.GetMorganFingerprintAsBitVect(mol,2,2048)
+        fpts =  AllChem.GetMorganFingerprintAsBitVect(mol,2,3000)
         mfpts = np.array(fpts)
         Morgan_fpts.append(mfpts)
     return np.array(Morgan_fpts)
